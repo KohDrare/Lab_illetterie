@@ -218,3 +218,26 @@ body {
         max-width: 100px; /* Tu peux ajuster la taille des images si nécessaire */
     }
 }
+/* Effet de survol pour les ordinateurs */
+.images img:hover, .offer:hover {
+    border-color: white;
+    background-color: #444; /* exemple d'illumination */
+}
+
+/* Interaction tactile sur mobile : on utilise :active pour les appareils tactiles */
+@media (max-width: 768px) {
+    .images img:active, .offer:active {
+        border-color: white;
+        background-color: #444; /* effet similaire à celui du survol */
+    }
+}
+/* Désactiver l'effet de survol pour les mobiles */
+@media (max-width: 768px) {
+    .images img:hover, .offer:hover {
+        border-color: transparent; /* désactive l'effet */
+        background-color: transparent;
+    }
+}
+body {
+    overflow-x: hidden;
+}
