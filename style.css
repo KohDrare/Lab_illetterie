@@ -205,3 +205,16 @@ body {
     margin-top: 10px;
     min-height: 400px; /* Pour garantir que le contenu est suffisant pour un défilement */
 }
+@media screen and (max-width: 768px) {
+    .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Crée une grille avec 2 colonnes */
+        gap: 10px; /* Espace entre les images */
+        margin-bottom: 20px;
+    }
+
+    .images img {
+        width: 100%; /* Les images prennent toute la largeur de la colonne */
+        max-width: 100px; /* Tu peux ajuster la taille des images si nécessaire */
+    }
+}
