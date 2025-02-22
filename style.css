@@ -1,0 +1,207 @@
+.images img, .offer {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8);
+    border: none !important; /* Empêche l'apparition d'un cadre noir */
+}
+
+.images img:active, .offer:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Effet néon permanent quand une option est sélectionnée */
+.images img.selected, .offer.selected {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+    border-color: white;
+}
+.next-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px; /* Taille réduite */
+    margin-top: 50px; /* Espace plus bas */
+    font-size: 1.2em; /* Réduction de la taille du texte */
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid white;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 5px white, 0 0 10px white;
+}
+
+.next-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px white, 0 0 20px white;
+}
+
+.next-button:active {
+    transform: scale(1);
+    box-shadow: 0 0 5px white;
+}
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+.fixed-image {
+    position: fixed;
+    top: 0;
+    width: 25%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Sépare les images */
+    align-items: center; /* Centre verticalement */
+    width: 100%;
+    height: 100vh; /* Pleine hauteur de l'écran */
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0; /* Retirer le padding pour un meilleur placement */
+}
+
+.image-container img {
+    width: 300px; /* Taille des images */
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.image-container img:first-child {
+    margin-left: 5%; /* Ajuste la position de l’image de gauche */
+}
+
+.image-container img:last-child {
+    margin-right: 5%; /* Ajuste la position de l’image de droite */
+}
+.selected {
+    border: 2px solid white !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8);
+}
+.side-image {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px; /* Taille fixe des images */
+    height: auto;
+    opacity: 0.9;
+    border-radius: 20px;
+    z-index: -1; /* Assurer que les images sont derrière les autres éléments */
+}
+
+.left {
+    left: 10%; /* Espacement à partir du côté gauche */
+}
+
+.right {
+    right: 10%; /* Espacement à partir du côté droit */
+}
+
+.offer:hover, .offer.selected {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1), 
+                0 0 20px rgba(255, 255, 255, 0.8), 
+                0 0 30px rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+}
+.images img {
+    width: 80px; /* Taille ajustée (réduction) */
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+.neon-title {
+    font-size: 4vw; /* Taille réduite pour éviter qu'il ne prenne trop de place */
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    text-shadow: 0 0 3px #fff, 0 0 6px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6);
+    padding: 20px; /* Espacement autour du titre */
+    background-color: black; /* Fond noir autour du titre */
+    border: 5px solid black; /* Bordure noire autour du titre */
+    border-radius: 15px; /* Arrondi des coins */
+    display: inline-block; /* Permet de centrer le titre tout en ayant un cadre */
+    box-sizing: border-box; /* Assure que la bordure n'affecte pas la taille globale */
+    margin-top: 20px; /* Donne un peu d'espace en haut pour qu'il ne soit pas trop collé au dessus */
+}
+
+.neon-title {
+    font-size: 4vw; /* Taille ajustée pour éviter que le titre soit trop grand */
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    text-shadow: 0 0 3px #fff, 0 0 6px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6);
+    padding: 5px; /* Réduction du padding autour du titre */
+    background-color: black;
+    border: 5px solid black;
+    border-radius: 15px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 40px; /* Réduction de la marge au-dessus du titre pour le rapprocher du reste */
+}
+
+.container {
+    background-color: #111;
+    padding: 15px; /* Réduction du padding pour moins d'espace autour du contenu */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px; /* Réduction de la marge du conteneur pour le rapprocher du titre */
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Calibri, sans-serif;
+    margin-top: 0; /* Retirer l'espace au-dessus de l'ensemble de la page */
+}
+.next-button {
+    background-color: #333;
+    color: white;
+    padding: 15px 0px; /* Un peu plus de padding pour rendre le bouton plus visible */
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px; /* Réduction de la marge au-dessus du bouton pour le rapprocher du reste */
+    transition: 0.3s;
+    width: 200px; /* Largeur fixe pour uniformiser le bouton */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.next-button:hover {
+    background-color: #444;
+}
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Calibri, sans-serif;
+    margin: 0; /* Enlève la marge par défaut autour du body */
+    height: 100%; /* Assure que la hauteur du body occupe toute la hauteur de la fenêtre */
+    overflow-y: auto; /* Active le défilement vertical */
+}
+
+.container {
+    background-color: #111;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    min-height: 400px; /* Pour garantir que le contenu est suffisant pour un défilement */
+}

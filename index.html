@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euro Offer Selector</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Calibri, sans-serif;
+        }
+        .neon-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    text-shadow: 0 0 3px #fff, 0 0 6px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6);
+}
+        .container {
+            background-color: #111;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        h2 {
+            font-size: 1.3em;
+            font-family: "Times New Roman", Times, serif;
+            margin-bottom: 10px;
+        }
+        .divider {
+            width: 80%;
+            height: 1px;
+            background-color: white;
+            margin: 10px auto;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .images img {
+            width: 100px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+        .images img.selected {
+            border-color: white;
+        }
+        .offers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .offer {
+            background-color: #333;
+            padding: 15px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .offer:hover {
+            background-color: #444;
+        }
+        .offer.selected {
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="neon-title">Lab_illetterie</h1>
+    <div class="container">
+        <h2>Choose the type of euro</h2>
+        <div class="divider"></div>
+        <div class="images">
+            <img src="10euro.png" alt="10 Euro" onclick="toggleSelection(this)">
+            <img src="20euro.jpg" alt="20 Euro" onclick="toggleSelection(this)">
+            <img src="50euro.jpg" alt="50 Euro" onclick="toggleSelection(this)">
+            <img src="100euro.jpg" alt="100 Euro" onclick="toggleSelection(this)">
+        </div>
+        <h2>Choose an offer</h2>
+        <div class="divider"></div>
+        <div class="offers">
+            <div class="offer" onclick="toggleSelection(this)">50 € - 500 €</div>
+            <div class="offer" onclick="toggleSelection(this)">100 € - 1200 €</div>
+            <div class="offer" onclick="toggleSelection(this)">300 € - 3700 €</div>
+            <div class="offer" onclick="toggleSelection(this)">500 € - 6500 €</div>
+            <div class="offer" onclick="toggleSelection(this)">1000 € - 13700 €</div>
+        <div class="next-button" onclick="nextStep()">Order</div>
+        </div>
+    </div>
+    <script>
+        function toggleSelection(element) {
+            element.classList.toggle('selected');
+        }
+    </script>
+</body>
+<img src="image1.png" class="side-image left">
+<img src="image2.png" class="side-image right">
+</html>
